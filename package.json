@@ -1,0 +1,27 @@
+{
+  "name": "generate-pdf-service",
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch --clear-screen=false ./src/index.ts",
+    "start": "tsx ./src/index.ts",
+    "postinstall": "pnpm dlx @puppeteer/browsers install chrome@stable --path $HOME/.cache/puppeteer"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.7",
+    "@hono/zod-validator": "^0.2.2",
+    "@paralleldrive/cuid2": "^2.2.2",
+    "hono": "^4.6.13",
+    "hono-rate-limiter": "^0.4.2",
+    "puppeteer": "^23.10.3",
+    "sanitize-html": "^2.13.1",
+    "tsx": "^4.19.2",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@total-typescript/ts-reset": "^0.6.1",
+    "@tsconfig/node20": "^20.1.4",
+    "@types/node": "^22.10.2",
+    "@types/sanitize-html": "^2.13.0",
+    "typescript": "^5.7.2"
+  }
+}
