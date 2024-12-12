@@ -6,7 +6,7 @@ import { generatePdf } from "@/lib/puppeteer";
 
 const pdfRoute = new Hono();
 
-pdfRoute.post("/", zValidator("json", htmlSchema), async (c) => {
+pdfRoute.post("/generate", zValidator("json", htmlSchema), async (c) => {
   try {
     const { html } = c.req.valid("json");
 
